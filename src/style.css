@@ -1,3 +1,25 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1 {
     color:red;
+}
+
+.image-today {
+    width: 150px;
+
+}
+
+.weather-app-wrapper {
+    width: 680px;
+    margin: 30px auto;
+    font-family:"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.weather-app {
+  border: 1px solid rgb(212, 212, 212);  
+  border-radius: 5px;
+  padding: 5px 20px;
 }
