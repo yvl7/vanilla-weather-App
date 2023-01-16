@@ -16,6 +16,39 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 let day = days[date.getDay()];
 return `${day} ${hours} :${minutes}`;
 }
+ 
+
+
+    
+   
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = "";
+    let days = ["Thu", "Fri", "Sat"];
+    days.forEach(function(day){
+    forecastHTML = 
+       forecastHTML +
+        `
+     <div class="row next-corecast-wrapper">
+        <div class="row next-corecast">
+        <div class="col-2">${day}</div>
+        <div class="col-4">img</div>
+        <div class="col-3">temp-max</div>
+        <div class="col-2">temp-min</div>
+        </div>
+   </div>
+     `;    
+    })
+      
+
+     forecastElement.innerHTML = forecastHTML;
+}
+    
+    displayForecast();
+
+   
+    
+
 
 
 function ShowWeatherData (response) {
