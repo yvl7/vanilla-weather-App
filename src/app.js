@@ -16,29 +16,44 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 let day = days[date.getDay()];
 return `${day} ${hours} :${minutes}`;
 }
+
+function formatForecastDate (timestamp) {
+    let date = new Date (timestamp * 1000);
+    let day = date.getDay ();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[day];
+    }
  
 
 
     
    
 function displayForecast(response) {
-    console.log(response.data.daily);
+    let forecast = response.data.daily;
+
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = "";
-    let days = ["Thu", "Fri", "Sat"];
-    days.forEach(function(day){
+   
+    forecast.forEach(function(forecastDay, index){
+        if (index <4) {
     forecastHTML = 
        forecastHTML +
         `
      <div class="row next-corecast-wrapper">
         <div class="row next-corecast">
-        <div class="col-2">${day}</div>
-        <div class="col-4">img</div>
-        <div class="col-3">temp-max</div>
-        <div class="col-2">temp-min</div>
+        <div class="col-2">${formatForecastDate(forecastDay.time)}</div>
+        <div class="col-4">
+             <img src="src/icon-${forecastDay.condition.icon}.png" class="image-day-forecast" alt="${forecastDay.condition.description}">
+           </div>
+        <div class="col-3 description">${forecastDay.condition.description}</div>
+        <div class="col-3 min-max-temp">
+        <div class="row temp-max">${Math.round(forecastDay.temperature.maximum)}°C</div>
+        <div class="row temp-min">${Math.round(forecastDay.temperature.minimum)}°C</div>
+        </div>
         </div>
    </div>
      `;    
+        }
     })
       
      forecastElement.innerHTML = forecastHTML;
@@ -61,7 +76,7 @@ temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 let humidityElement = document.querySelector("#humidity");
 humidityElement.innerHTML = ` ${response.data.temperature.humidity}%`;
 let windElement = document.querySelector("#wind");
-windElement.innerHTML = ` ${response.data.wind.speed}km/h`;
+windElement.innerHTML = ` ${Math.round(response.data.wind.speed)}km/h`;
 let feelsTemperatureElement = document.querySelector("#feels");
 feelsTemperatureElement.innerHTML = Math.round(response.data.temperature.feels_like);
 let cityElement = document.querySelector("#city");
