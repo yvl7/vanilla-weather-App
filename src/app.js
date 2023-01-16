@@ -1,3 +1,5 @@
+
+
 function formatDate (timestamp) {
 let date = new Date (timestamp);
 let hours = date.getHours();
@@ -25,7 +27,6 @@ let windElement = document.querySelector("#wind");
 windElement.innerHTML = ` ${response.data.wind.speed}km/h`;
 let feelsTemperatureElement = document.querySelector("#feels");
 feelsTemperatureElement.innerHTML = Math.round(response.data.temperature.feels_like);
-console.log(response.data)
 let cityElement = document.querySelector("#city");
 cityElement.innerHTML = response.data.city;
 let lastTimeUpdateElement = document.querySelector("#date");
