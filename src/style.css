@@ -1,5 +1,7 @@
 li {
     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
     
   }
   .image-block {
@@ -35,8 +37,7 @@ li {
   border: 1px solid rgb(212, 212, 212);  
   border-radius: 5px;
   padding: 5px 20px;
-  font-family: 'Gloria Hallelujah', cursive;
-  
+  font-family: 'Indie Flower', cursive;
 }
 
 .heding-block {
