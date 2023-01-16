@@ -30,10 +30,13 @@ let cityElement = document.querySelector("#city");
 cityElement.innerHTML = response.data.city;
 let lastTimeUpdateElement = document.querySelector("#date");
 lastTimeUpdateElement.innerHTML = formatDate(response.data.time * 1000);
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src", `src/icon-${response.data.condition.icon}.png`);
+iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 let units = "metric";
-let city = "Lisbon"
+let city = "Sydney"
 let keyApi = "5t7bf729abf934921a62eed49o0cd875";
 let weatherUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${keyApi}&units=${units}`;
 

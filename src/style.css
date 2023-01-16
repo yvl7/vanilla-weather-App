@@ -1,5 +1,6 @@
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
 }
 
 h1 {
@@ -22,4 +23,22 @@ h1 {
   border: 1px solid rgb(212, 212, 212);  
   border-radius: 5px;
   padding: 5px 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  
 }
+
+.heding-block {
+    font-family: 'Rubik Vinyl', cursive;
+}
+
+
+.week-forecast-block {
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.temp-block,
+.city-name {
+    font-family: 'Rubik Vinyl', cursive;
+}
+
