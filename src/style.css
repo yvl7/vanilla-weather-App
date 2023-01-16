@@ -1,17 +1,26 @@
-body {
-    
-
+  
+  .image-block {
+  position: relative;
+  
+  margin-left: -21.333333%;
+  
 }
 
-h1 {
-    color:red;
-}
+  .temp-block {
+    z-index: 2;
+    margin-right: -21.333333%;
+  }
+
+.temp-wet { max-width: 340px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  
 
 .image-today {
-    width: 150px;
+    width: 180px;
 
 }
-
 .weather-app-wrapper {
     width: 680px;
     margin: 30px auto;
@@ -43,7 +52,8 @@ h1 {
 .units {
     font-family: 'Rubik Vinyl', cursive;
     padding: 0;
-    margin-top: -6px;
+    position: relative;
+    top: -25px;
 }
 
 #temperature {
