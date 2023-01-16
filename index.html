@@ -17,17 +17,28 @@
     <div class="weather-app-wrapper">
         <div class="weather-app">
         <div class="heding-block">Weather APP</div>
+        <form id="search-form">
         <div class="row search-block"> 
-            <div class="col-6">Search</div>
-            <div class="col-6"> button button</div>
+            <div class="col-9"> 
+            <input 
+                type="search" placeholder="Type a city..." 
+                class="form-control" id="input-city" autocomplete="off"> 
+            </div>
+            <div class="col-3">
+                <input type="submit" value="search" class="btn btn-outline-primary w-100">
+            </div>
         </div>
+        </form>
         <div class="row all-forecast-block">
             <div class="col-6 today-forecast-block">
                 <div class="city-name" id="city"></div>
-                <div class="date">Last update <span  id="date"></span> </div>
+                <div class="date"> <span  id="date"></span> <small class="time-of-update">Last update</small> </div>
                 <div class="status-sky" id="status-sky"></div>
                 <div class="row">
-                    <div class="temp-block col-auto"> <span id="temperature"></span> °C┃<a href="#">°F</a></div>
+                    <div class="temp-block col-auto"> 
+                        <span id="temperature"></span> 
+                        <span class="units">°C┃<a href="#">°F</a></span> 
+                    </div>
                     <div class="image-block col-auto"> 
                         <img src="src/icon.png" class="image-today" id="icon" alt="">
                 </div>

@@ -35,9 +35,20 @@ iconElement.setAttribute("src", `src/icon-${response.data.condition.icon}.png`);
 iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let units = "metric";
-let city = "Sydney"
-let keyApi = "5t7bf729abf934921a62eed49o0cd875";
-let weatherUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${keyApi}&units=${units}`;
 
-axios.get(weatherUrl).then(ShowWeatherData);
+
+function search (city) {
+    let units = "metric";
+    let keyApi = "5t7bf729abf934921a62eed49o0cd875";
+    let weatherUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${keyApi}&units=${units}`;
+    axios.get(weatherUrl).then(ShowWeatherData);
+}
+function handleSubmit (event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#input-city");
+    search(cityInputElement.value);
+    
+}
+
+let form = document.querySelector('#search-form');
+form.addEventListener("submit", handleSubmit);

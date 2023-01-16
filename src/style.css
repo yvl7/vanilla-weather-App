@@ -29,6 +29,8 @@ h1 {
 
 .heding-block {
     font-family: 'Rubik Vinyl', cursive;
+    font-size: 30px;
+    color: rgb(141, 162, 202);
 }
 
 
@@ -37,8 +39,27 @@ h1 {
 }
 
 
-.temp-block,
-.city-name {
+
+.units {
     font-family: 'Rubik Vinyl', cursive;
+    padding: 0;
+    margin-top: -6px;
+}
+
+#temperature {
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 50px;
+}
+.btn {
+    color: rgb(141, 162, 202);
+    font-weight: 900;
+    
+}
+
+.time-of-update {
+    font-size: 10px;
+    display: block;
+    padding: 0;
+    margin-top: -6px;
 }
 
